@@ -1,0 +1,13 @@
+
+#mainContainer.mainPage .buttons {
+    display: inline-block;
+    justify-content: center;
+}
+
+#mainContainer.animesPage .buttons {
+    display: none;
+}
+
+#mainContainer.mangasPage .buttons {
+    display: none;
+}
