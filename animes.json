@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Naruto",
+        "image": "https://example.com/naruto.jpg",
+        "description": "A young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village."
+    },
+    {
+        "id": 2,
+        "title": "One Piece",
+        "image": "https://example.com/onepiece.jpg",
+        "description": "A story about a group of pirates led by Monkey D. Luffy, who is searching for the ultimate treasure known as 'One Piece'."
+    },
+    {
+        "id": 3,
+        "title": "Attack on Titan",
+        "image": "https://example.com/aot.jpg",
+        "description": "In a world where humanity is on the brink of extinction due to giant humanoid creatures known as Titans, Eren Yeager vows to eradicate them."
+    },
+    {
+        "id": 4,
+        "title": "My Hero Academia",
+        "image": "https://example.com/mha.jpg",
+        "description": "In a world where nearly everyone has superpowers known as 'Quirks', Izuku Midoriya dreams of becoming a great hero despite being born without a Quirk."
+    },
+    {
+        "id": 5,
+        "title": "Demon Slayer",
+        "image": "https://example.com/demonslayer.jpg",
+        "description": "Tanjiro Kamado becomes a demon slayer after his family is slaughtered by demons and his sister Nezuko is turned into one."
+    }
+]

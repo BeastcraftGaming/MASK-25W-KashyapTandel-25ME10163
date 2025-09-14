@@ -4,19 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>Anime Hub</title>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
-    <div id="mainContainer" class="mainPage">
+    <div id="mainContainer" class="mainPageDiv">
 
-        <button id="animesButton" class="buttons">Animes</button>
-        <button id="mangasButton" class="buttons">Mangas</button>
+        <div id="mainPageDiv">
 
+            <h1>Welcome to Anime hub</h1>
+            <button id="animesButton" class="buttons">Animes</button>
+            <button id="mangasButton" class="buttons">Mangas</button>
+
+        </div>
+
+        <div id="animePageDiv" class="hiddenPage">
+
+            <h1>Anime List</h1>
+            <div id="animeList" class="listContainer">
+                
+            </div>
+            <button id="backToMainFromAnime" class="buttons">
+                Back to Main
+            </button>
+        </div>
+
+        <div id="mangaPageDiv" class="hiddenPage">
+
+            <h1>Manga List</h1>
+            <div id="mangaList" class="listContainer">
+                
+            </div>
+            <button id="backToMainFromManga" class="buttons">
+                Back to Main
+            </button>
+
+        </div> 
+
+        <div id="infoBox" class="infoBox hidden">
+            <div class="infoBoxContent">
+                <span id="closeInfoBox" class="closeBtn">&times;</span>
+                <img id="infoImage" src="" alt="Anime/Manga Image">
+                <h2 id="infoTitle">Title</h2>
+                <p id="infoDescription">Description</p>
+                <p id="infoAdditional">Additional Info</p>
+            </div>
+        </div>
     </div>
+
+    <div id="submissionBox" class="submissionBox hidden">
+        <div class="submissionContent">
+        <span id="closeSubmission" class="closeBtn">&times;</span>
+        <h2>Add New Anime / Manga</h2>
+    
+        <form id="submissionForm">
+            <label for="titleInput">Title</label>
+            <input type="text" id="titleInput" name="title" placeholder="Enter title..." required>
+      
+            <label for="imageInput">Image URL</label>
+            <input type="url" id="imageInput" name="image" placeholder="Enter image link..." required>
+      
+            <label for="descriptionInput">Description</label>
+            <textarea id="descriptionInput" name="description" rows="4" placeholder="Enter description..." required></textarea>
+
+            <button type="submit" class="submitBtn">Submit</button>
+        </form>
+    </div>
+</div>
 </body>
 
 <script src="script.js"></script>

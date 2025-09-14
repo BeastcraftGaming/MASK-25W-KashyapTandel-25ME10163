@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "title": "Naruto",
+        "image": "https://example.com/naruto.jpg",
+        "description": "A story about a young ninja.",
+        "chapters": 700,
+        "author": "Masashi Kishimoto",
+        "Last updated": "2024-05-01",
+        "status": "Completed",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "title": "One Piece",
+        "image": "https://example.com/onepiece.jpg",
+        "description": "A tale of pirates searching for the ultimate treasure.",
+        "chapters": 1000,
+        "author": "Eiichiro Oda",
+        "Last updated": "2024-05-01",
+        "status": "Ongoing",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "rating": 4.8
+    },
+
+    {
+        "id": 3,
+        "title": "Attack on Titan",
+        "image": "https://example.com/aot.jpg",
+        "description": "Humanity's struggle against giant humanoid creatures known as Titans.",
+        "chapters": 139,
+        "author": "Hajime Isayama",
+        "Last updated": "2024-05-01",
+        "status": "Completed",
+        "genre": ["Action", "Drama", "Fantasy"],
+        "rating": 4.7
+    },
+    {
+        "id": 4,
+        "title": "My Hero Academia",
+        "image": "https://example.com/mha.jpg",
+        "description": "A world where nearly everyone has superpowers known as 'Quirks'.",
+        "chapters": 350,
+        "author": "Kohei Horikoshi",
+        "Last updated": "2024-05-01",
+        "status": "Ongoing",
+        "genre": ["Action", "Comedy", "Superhero"],
+        "rating": 4.6
+    },
+    {
+        "id": 5,
+        "title": "Demon Slayer",
+        "image": "https://example.com/demonslayer.jpg",
+        "description": "A story about a young boy who becomes a demon slayer.",
+        "chapters": 205,
+        "author": "Koyoharu Gotouge",
+        "Last updated": "2024-05-01",
+        "status": "Completed",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "rating": 4.7
+    }
+]

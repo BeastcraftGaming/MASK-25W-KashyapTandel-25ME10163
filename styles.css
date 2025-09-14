@@ -1,13 +1,363 @@
+.hiddenPage {
+    display: none;
+}
 
-#mainContainer.mainPage .buttons {
+#mainContainer.mainPage #mainPageDiv {
     display: inline-block;
     justify-content: center;
 }
 
-#mainContainer.animesPage .buttons {
+#mainContainer.animesPage #mainPageDiv {
     display: none;
 }
 
-#mainContainer.mangasPage .buttons {
+#mainContainer.mangasPage #mainPageDiv {
     display: none;
+}
+
+#mainContainer.animesPage #animePageDiv {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Anime list grid container */
+#animeList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-height: 80vh;     /* keeps it scrollable */
+    overflow-y: auto;
+}
+
+/* Anime card item */
+.animeItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animeItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Anime image */
+.animeItem img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Anime title */
+.animeItem h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Anime description (truncated to 3 lines) */
+.animeItem p {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#mainContainer.mangasPage #mainPageDiv {
+    display: none;
+}
+
+#mainContainer.mangasPage #mangaPageDiv {
+    display: grid;
+}   
+
+/* Manga list grid container */
+#mangaList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-height: 80vh;     /* keeps it scrollable */
+    overflow-y: auto;
+}
+
+/* Manga card item */
+.mangaItem {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mangaItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Manga image */
+.mangaItem img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Manga title */
+.mangaItem h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Manga description (truncated to 3 lines) */
+.mangaItem p {
+    font-size: 0.9rem;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;   /* show 3 lines max */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Scrollbar styling for lists 
+#animeList::-webkit-scrollbar,
+#mangaList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#animeList::-webkit-scrollbar-thumb,
+#mangaList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#animeList::-webkit-scrollbar-thumb:hover,
+#mangaList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
+    */
+/* Info Box Overlay */
+.infoBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Hidden state */
+.infoBox.hidden {
+    display: none;
+}
+
+/* Info Box Content */
+.infoBoxContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Image inside info box */
+.infoBoxContent img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.infoBoxContent h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Description */
+.infoBoxContent p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Close Button */
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}
+.closeBtn:hover {
+    color: #e74c3c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Add card (works for both animeItem and mangaItem) */
+.addItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px dashed #aaa;
+    background: #fafafa;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.addItem:hover {
+    background: #f0f0f0;
+    border-color: #666;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Inner content */
+.addContent {
+    text-align: center;
+    color: #666;
+}
+
+/* Big plus icon */
+.plusIcon {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* Overlay */
+.submissionBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Hidden state */
+.submissionBox.hidden {
+    display: none;
+}
+
+/* Box content */
+.submissionContent {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button */
+.submissionContent .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}
+.submissionContent .closeBtn:hover {
+    color: #e74c3c;
+}
+
+/* Form styling */
+.submissionContent form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.submissionContent label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #444;
+    text-align: left;
+}
+
+.submissionContent input,
+.submissionContent textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.submissionContent input:focus,
+.submissionContent textarea:focus {
+    border-color: #007bff;
+}
+
+/* Submit button */
+.submitBtn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submitBtn:hover {
+    background: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
