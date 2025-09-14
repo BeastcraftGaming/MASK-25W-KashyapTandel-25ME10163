@@ -22,6 +22,48 @@
     text-align: center;
 }
 
+#mainPageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mainPageDiv h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buttons:active {
+    background-color: #004494;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Anime list grid container */
 #animeList {
     display: grid;
@@ -142,23 +184,7 @@
     text-overflow: ellipsis;
 }
 
-/* Scrollbar styling for lists 
-#animeList::-webkit-scrollbar,
-#mangaList::-webkit-scrollbar {
-    width: 8px;
-}
 
-#animeList::-webkit-scrollbar-thumb,
-#mangaList::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-#animeList::-webkit-scrollbar-thumb:hover,
-#mangaList::-webkit-scrollbar-thumb:hover {
-    background: #555;
-} 
-    */
 /* Info Box Overlay */
 .infoBox {
     position: fixed;
@@ -341,7 +367,7 @@
 }
 
 /* Submit button */
-.submitBtn {
+#submitBtn {
     background: #007bff;
     color: #fff;
     border: none;
@@ -352,7 +378,7 @@
     transition: background 0.2s ease;
 }
 
-.submitBtn:hover {
+#submitBtn:hover {
     background: #0056b3;
 }
 
