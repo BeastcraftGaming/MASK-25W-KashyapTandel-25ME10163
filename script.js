@@ -159,10 +159,10 @@ function addAnimeList() {
         animeItem.classList.add('animeItem');
         animeItem.innerHTML = `
             <h3>${anime.title}</h3>
-
+            <img src="${anime.image}" alt="${anime.title}">
             <p>${anime.description}</p>
         `;
-        //            <img src="${anime.image}" alt="${anime.title}">
+       
         animeListDiv.appendChild(animeItem);
 
         animeItem.addEventListener('click', () => {
